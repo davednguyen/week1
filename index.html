@@ -8,8 +8,10 @@
 
   <body>
     <h1>
+      <!-- top section -->
       David D. Nguyen
     </h1>
+      <!-- nav section -->
       <nav>
         <a href="http://google.com" target="_blank">Google</a>
         <a href="http://cnn.com" target="_blank">CNN</a>
@@ -18,6 +20,10 @@
     <article class="pageArticle">
       <p>Hello everyone</p>
     </article>
+    <p>-------------------------------------------------------------------------</p>
+      
+        <aside class="pageAside">the class is a part of front end development work</aside>
+    
     <p>-------------------------------------------------------------------------</p>
     <div>
       <p class="basicInfo"> this is a personal page of David Nguyen.</p>
@@ -30,11 +36,11 @@
       <p class="classTime"> class starts at <time>6:00 PM</time> and end at <time>9:00 PM</time> every Thursday</p>
     <p>-------------------------------------------------------------------------</p>
     <div>
-      <table class="classHomeworkSchedule">
+      <table class="classHomeworkSchedule" style="background:green">
         <tr>
-          <td>Week 1</td>
-          <td>Week 2</td>
-          <td>Week 3</td>
+          <td align="center">Week 1</td>
+          <td align="center">Week 2</td>
+          <td align="center">Week 3</td>
         </tr>
         <tr>
           <td>Homework 1</td>
@@ -51,19 +57,25 @@
             <li>Javascript</li>
        </ul>
     <p>-------------------------------------------------------------------------</p>
+    <!-- submit form -->
+    <h1 id="confirmArea"></h1>
     <form class="submistForm" action="#">
       Student Name:<br>
-      <input type="text" name="studentName" value="David Nguyen">
+      <input id="studentName" type="text" name="studentName" value="David Nguyen">
       <br>
       Job title:<br>
-      <input type="text" name="jobTitle" value="Test Engineer">
+      <input id="jobTitle" type="text" name="jobTitle" value="Test Engineer">
       <br><br>
-      <input type="submit" value="save the form">
+      <input  type="submit" value="save the form" onclick="formFunction()">
     </form>
     <p>-------------------------------------------------------------------------</p>
       <iframe class="musicFrame" width="400" height="300"
         src="https://www.youtube.com/embed/i56qCzx7g5Q">
       </iframe>
+    <p>-------------------------------------------------------------------------</p>
+      <summary>After this class you will gain knowledge of frontend development</summary>
+    <p>-------------------------------------------------------------------------</p>
+       <button type="button" id="testButton" onclick="testFunction()">Test this Button</button>
     <p>-------------------------------------------------------------------------</p>
     <br class="space class">
     <footer class="footerSection">
@@ -71,4 +83,17 @@
       <p>Designed by David Nguyen &#169</p>
     </footer>
   </body>
+  <!-- script funtion on html page-->
+  <script>
+    function testFunction()
+    {
+        document.getElementById("confirmArea").innerHTML = "you clicked the button";
+    }
+    
+    function formFunction()
+    {
+       
+       document.getElementById("confirmArea").innerHTML = "David Nguyen"
+    }
+  </script>
 </html>
